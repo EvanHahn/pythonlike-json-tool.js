@@ -5,6 +5,13 @@
   "author": "Evan Hahn <me@evanhahn.com> (https://evanhahn.com)",
   "license": "MIT",
   "main": "json-tool",
+  "engines": {
+    "node": ">= 6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/EvanHahn/pythonlike-json-tool.js.git"
+  },
   "scripts": {
     "pretest": "standard --fix",
     "test": "mocha"
