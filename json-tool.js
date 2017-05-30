@@ -1,10 +1,6 @@
 var INDENT = '    '
 
-module.exports = function jsonToolStringify (v) {
-  return stringify(v, 0)
-}
-
-function stringify (node) {
+module.exports = function jsonToolStringify (node) {
   if (typeof node !== 'object' || node == null) {
     return JSON.stringify(node)
   }
@@ -13,7 +9,7 @@ function stringify (node) {
     if (node.length === 0) { return '[]' }
 
     return '[\n' + node.map(function (element) {
-      return indent(stringify(element))
+      return indent(jsonToolStringify(element))
     }).join(',\n') + '\n]'
   }
 
@@ -21,7 +17,7 @@ function stringify (node) {
   if (keys.length === 0) { return '{}' }
 
   return '{\n' + keys.map(function (key) {
-    return indent(JSON.stringify(key) + ': ' + stringify(node[key]))
+    return indent(JSON.stringify(key) + ': ' + jsonToolStringify(node[key]))
   }).join(',\n') + '\n}'
 }
 
