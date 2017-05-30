@@ -1,0 +1,22 @@
+{
+  "name": "python-style-json.tool",
+  "description": "JSON.stringify just like Python's json.tool",
+  "version": "0.0.0",
+  "author": "Evan Hahn <me@evanhahn.com> (https://evanhahn.com)",
+  "license": "MIT",
+  "main": "json-tool",
+  "scripts": {
+    "pretest": "standard --fix",
+    "test": "mocha"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "standard": "^10.0.2"
+  }
+}
