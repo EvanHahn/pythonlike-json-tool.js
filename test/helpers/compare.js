@@ -1,4 +1,4 @@
-var stringify = require('../../json-tool')
+var stringify = require('../../pythonlike-json-tool')
 var spawn = require('child_process').spawn
 
 module.exports = function compare (arr) {

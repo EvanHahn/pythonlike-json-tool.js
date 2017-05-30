@@ -1,6 +1,6 @@
 var compare = require('./helpers/compare')
 
-describe('jsonToolStringify', function () {
+describe('Pythonlike json.tool', function () {
   it('stringifies primitives in the same way', function () {
     return compare([
       null,
