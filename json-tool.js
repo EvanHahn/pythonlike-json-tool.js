@@ -1,4 +1,4 @@
-const INDENT = '    '
+var INDENT = '    '
 
 module.exports = function jsonToolStringify (v) {
   return stringify(v, 0)
@@ -12,21 +12,21 @@ function stringify (node) {
   if (Array.isArray(node)) {
     if (node.length === 0) { return '[]' }
 
-    return '[\n' + node.map((element) => {
+    return '[\n' + node.map(function (element) {
       return indent(stringify(element))
     }).join(',\n') + '\n]'
   }
 
-  const keys = Object.keys(node).sort()
+  var keys = Object.keys(node).sort()
   if (keys.length === 0) { return '{}' }
 
-  return '{\n' + keys.map((key) => {
+  return '{\n' + keys.map(function (key) {
     return indent(JSON.stringify(key) + ': ' + stringify(node[key]))
   }).join(',\n') + '\n}'
 }
 
 function indent (str) {
-  return str.split('\n').map((line) => {
+  return str.split('\n').map(function (line) {
     return INDENT + line
   }).join('\n')
 }
