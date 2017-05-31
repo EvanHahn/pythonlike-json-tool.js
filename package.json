@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "author": "Evan Hahn <me@evanhahn.com> (https://evanhahn.com)",
   "license": "MIT",
-  "main": "json-tool",
+  "main": "pythonlike-json-tool",
   "engines": {
     "node": ">= 6"
   },
